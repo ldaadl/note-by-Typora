@@ -1,86 +1,72 @@
-repository
+# github及git使用指南
 
-star
+## 一、六个概念
 
-fork
+概念：
 
-pull request
+> repository:
+>
+> > 仓库，一个仓库即一个项目，仓库是集中存放和管理你的代码的位置。
+>
+> star：
+>
+> > 收藏，就是它通常的含义，收藏一个项目，方便下次查看
+>
+> fork：
+>
+> > 克隆，将别人的仓库fork一份到自己的仓库集下，便于自己操作
 
-watch
+> pull request:
+>
+> > 在将别人的仓库fork之后，我们有自己的想法，对别人的文件进行了修改，但我们不满足于仅仅自己使用修改或添加的内容，希望将这些修改也实现到我们fork的最初的仓库中，此时我们可以进行pull request，向原仓库的拥有者提交我们的修改，让其审核是否可以将修改实现到原仓库里。
+>
+> watch：
+>
+> > 即关注，关注某个项目后，与之相关的消息我们就都可以收到
+>
+> issue：
+>
+> > 我们在使用某个仓库的时候，发现了一个问题，我们就可以新建一个issue，就相当与开启了一个与仓库拥有者的短暂聊天，在我们解决了这个问题之后，可以关闭这个issue。
 
-issue
+## 二、Github主页
 
+Github的主页很简洁明了，只有以下三个：
 
+> repository主页
+>
+> 个人主页
+>
+> github主页
 
-github主页
+## 三、git的使用
 
-repository主页
+<u><em>前提</em>:我们可以通过github网站来管理我们的仓库，但是打开网页有时有点繁琐，我们可以通过git在本地使用命令行对仓库进行管理。</u>
 
-个人主页
+### 使用git管理仓库的步骤(省略了登录和验证等过程)：
 
+#### 1.对于已有的仓库：
 
+* git clone 仓库地址：将远程仓库克隆到本地
 
-一个git库对应一个开源项目，我们通过git管理该项目
+* 增、删除、改：
 
+  增：git add “文件名”（将文件添加到暂存区）
 
+   删：先删除本地文件，在使用git rm “文件名”删除暂存区中文件
 
-git：
+  改：本地修改文件后，和增操作相同，添加到暂存区
 
-working directory -》暂存区-》git repository
+* 通过命令git commit（-m "同步描述"）,将本地仓库的变化同步到仓库
 
-git status 查看文件状态 
+* 通过命令git push将本地仓库同步到远端
 
-git add 文件名 添加到暂存区
+#### 2.git本地新建仓库
 
-git commit -m “提交描述”
-
-一般流程：git status,git add,git status,git commit -m,git status
-
-
-
-初始化操作：
-
-设置用户名：git config --global user.name "用户名"
-
-设置用户邮箱：git config --global user.email "邮箱"
-
-初始化一个新的Git仓库：
-
-在本地新建一个文件夹
-
-在文件内初始化git（把文件夹变为一个git仓库） cd 文件夹-》git init
-
-向仓库中添加文件：
-
-修改仓库：
-
-修改本地的文件之后，不会自动同步，还需自己再次上传，步骤同添加文件
-
-删除仓库中文件：
-
-删除本地文件
-
-git rm 文件名 删除仓库文件
-
-git commit -m “提交描述”
-
-
-
-git管理远程仓库：
-
-目的：备份，实现代码集中化管理
-
-git push命令将本地的仓库同步到远程仓库
-
-但是我们需要先将远程仓库fork到本地，在进行修改提交：
-
-git clone 仓库地址
+#### 3.git本地删除仓库
 
 
 
-
-
-
+## 四、github pages搭建网站
 
 github pages搭建网站：
 
@@ -91,6 +77,6 @@ github pages搭建网站：
 
 可以为每个仓库搭建一个站点：
 
-项目主页：settings-》launch automatic page generator-》新建站点基础信息设置-》选择住他-》生成网页
+项目主页：settings-》launch automatic page generator-》新建站点基础信息设置-》选择主题-》生成网页
 
 生成站点后的网页文件全部在自动生成的另一个分支里。
