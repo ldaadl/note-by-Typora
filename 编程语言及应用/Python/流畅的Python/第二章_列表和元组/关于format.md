@@ -22,7 +22,7 @@ my_list = ['lda', 'xiesenlin']
 print('There are two people {0[0]} and {0[1]}'.format(my_list))
 # 或者
 print('There are two people {0} and {1}'.format(*my_list))
-```  
+```
 
 * 使用.format()的标准输出
 
@@ -127,7 +127,7 @@ b
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python</span><span class="hl-code">
 </span><span class="hl-comment"># -*- coding: UTF-8 -*-</span><span class="hl-code">
- 
+
 </span><span class="hl-identifier">print</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">{} 对应的位置是 {{0}}</span><span class="hl-quotes">&quot;</span><span class="hl-code">.</span><span class="hl-identifier">format</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">runoob</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span></div>
 </div>
 </div><p>输出结果为：</p>
