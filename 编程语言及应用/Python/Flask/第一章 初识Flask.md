@@ -45,7 +45,11 @@ def hello():
 
 ## 二.配置Flask
 
-### 1.启动选项
+### 1.运行环境
+
+运行环境是flask启动时根据当前环境变量作出的一些反应，要配置启动选项一般有两种方法，一是直接设置系统的环境变量，linux、macos是export 变量=值，而windows是set 变量=值；但是如果安装了python-dotenv，当flask启动时，他会自动从.flaskenv和.env中加载环境变量
+
+### 2.启动选项
 
 启动选项举例：
 
@@ -53,7 +57,7 @@ def hello():
 
 改变默认端口	flask run --port=8000
 
-所有启动选项都可以通过设置环境变量完成，这些环境变量在项目下文件.flaskenv中
+所有启动选项都可以通过设置环境变量完成，这些环境变量可以在项目下文件.flaskenv中，也可以直接设置环境变量
 
 <img src="./images/1.png">
 
@@ -63,11 +67,9 @@ pycharm中的调试模式无法通过flask开启，必须修改pycharm的配置
 
 配置文件除了.flaskenv以外，还有.env（在项目下）和.gitignore（在venv下），.env保存一些不能泄露的配置选项，例如一些账号密码之类的，而.flaskenv则是存放和flask相关的可公开变量。.gitignore则可以指定在上传git时，哪些文件被忽略。
 
-### 2.运行环境
-
-上面已经解释
-
 ### 3.内置配置
+
+flask的一些行为需要我们设置变量来配置，比如连接数据库时目标主机的ip、端口、密码账户等，这都通过app实例的config属性来设置。config属性是字典的子类，他可以通过设置字典的方式设置其值。
 
 设置内置变量：
 
@@ -86,6 +88,8 @@ app.config.update{
 读取：
 
 value=app.config['ADMIN_NAME']
+
+除了上面的直接设置值以外，更建议的是在环境变量中加入这些变量，然后在程序中通过os.getenv()获取这些值然后赋予配置变量
 
 ## 三.Flask的一些内容和部件
 

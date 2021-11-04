@@ -450,7 +450,7 @@ echo "{$foo->{$baz[1]}}\n";
 * 非必要情况下关闭allow_ulr_fopen和allow_ule_include
 * 关闭display_errors
 * log_errors=On
-* magic_quotes_gpc=off,这个函数不值得依赖，其性能低而且会导致新的安全问题
+  * magic_quotes_gpc=off,这个函数不值得依赖，其性能低而且会导致新的安全问题
 * 若PHP以CGI形式安装，需要关闭cgi.fix_pathinfo，避免文件解析问题
 * 开启HttpOnly
 * 全站启用https时开启session.cookie_secure
