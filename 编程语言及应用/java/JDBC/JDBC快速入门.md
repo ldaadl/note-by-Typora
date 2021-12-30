@@ -4,7 +4,7 @@
 
 <ol>
     <li>导入JDBC依赖包:import java.sql.*</li>
-    <li>注册JDBC驱动程序:Class.forName("com.mysql.cj.jdbc.Driver")</li>
+    <li>加载JDBC驱动程序:Class.forName("com.mysql.cj.jdbc.Driver")</li>
     <li>创建数据库连接对象:Connection conn = DriverManager.getConnection("jdbc:mysql://120.27.226.67:3306/security",USER,PASS)</li>
     <li>创建语句处理对象并执行<ol>
         <li>使用预处理<ul>
@@ -21,6 +21,7 @@
     <li>释放资源:rs.close();stmt.close();conn.close();</li>
 </ol>
 
+
 ## 二.两个例子
 
 ````java
@@ -29,10 +30,10 @@ package com.test.JDBC;
 import java.sql.*;
 
 public class SecondTryJDBC {
-    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    static final String HOST = "jdbc:mysql://ip/数据库";
-    static final String USER = "用户";
-    static final String PASS = "密码";
+    private  static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    private  static final String HOST = "jdbc:mysql://ip/数据库";
+    private  static final String USER = "用户";
+    private  static final String PASS = "密码";
 
     public static void main(String[] args) {
         Connection conn = null;

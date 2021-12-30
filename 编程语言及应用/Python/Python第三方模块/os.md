@@ -89,3 +89,5 @@
   onerror需要一个callable对象，当wark异常时，会调用
 
   followlinks为True时会遍历目录下快捷方式所指向的目录
+
+* os.rename(old,new)更改文件名
