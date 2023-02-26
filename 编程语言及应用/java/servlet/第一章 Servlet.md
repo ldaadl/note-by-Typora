@@ -192,7 +192,7 @@ HttpServletResponse
 
 ​	这里解释一下load-on-startup，这个标签使Servlet程序在整个程序开始n秒后加载，而不是第一次调用Servlet时加载，这对于比较费时的init方法非常有帮助。
 
-​	部署描述符就是WEB_INF目录下的web.xml文件，我们在Java代码中部署应用的方式是使用@WebServlet注解类，但是使用不是描述符有时候是比注解类更具有优越性，其一可以部署@WebServlet中没有的元素；其二，一些配置的修改无需重新编译Servlet类，如应用的路径和初始化参数等，可以直接在Web.xml中修改即可。
+​	部署描述符就是WEB_INF目录下的web.xml文件，我们在Java代码中部署应用的方式是使用@WebServlet注解类，但是使用部署描述符有时候是比注解类更具有优越性，其一可以部署@WebServlet中没有的元素；其二，一些配置的修改无需重新编译Servlet类，如应用的路径和初始化参数等，可以直接在Web.xml中修改即可。
 
 ​	部署描述符的中的内容可以覆盖掉注解类中的内容。
 
